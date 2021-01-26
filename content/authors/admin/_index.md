@@ -18,22 +18,17 @@ bio: My research interests include distributed robotics, mobile computing and pr
 
 # Interests to show in About widget
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Data Science
+- R and Python
+- Network analysis
+- Capacity building
 
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: BSc in Applied Statistics with IT
+    institution: Maseno University
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -54,7 +49,7 @@ social:
   link: https://github.com/ParmutiaMakui
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/ParmutiaMakuui
+  link: https://www.linkedin.com/ParmutiaMakui
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
@@ -70,7 +65,7 @@ email: "parmutia.makui@gmail.com"
 highlight_name: false
 ---
 
-I am nn experienced and multi skilled data specialist in
+I am an experienced and multi skilled data specialist in
 statistical analysis and evidence based decision
 making. Through experience, I have gained skills in research, electronic
 data collection, data management, data analysis and communication. I am
