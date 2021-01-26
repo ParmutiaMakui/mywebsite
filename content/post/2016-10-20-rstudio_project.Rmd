@@ -1,0 +1,49 @@
+---
+title: "Setting up an RStudio Project"
+author: "Parmutia Makui"
+date: 2016-10-20
+categories: ["R"]
+tags: ["rmarkdown", "tidyverse", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r Load libraries}
+
+library(foreign)
+suppressPackageStartupMessages(library(dplyr))
+
+```
+
+
+# Setting up an R Studio Project
+## Why use R Studio Project?
+
+- It helps in organizing work very well
+- Enables better efficiency
+
+## Creating Projects
+
+- Open RStudio
+- **Option I:** On the top left corner you will see a down-facing arrow with 
+  **New project**
+- **Option II:** From the menu options, click on **File** then **New Project..**  
+- Use of either options should give you the New Project window shown below:
+
+<!-- \begin{frame} -->
+<!-- \frametitle{New Project Window} -->
+<!-- \begin{figure} -->
+<!-- \includegraphics[width=\textwidth, height=15cm]{Figures/New_Project.png} -->
+<!-- \caption{New Project Window} -->
+<!-- \end{figure} -->
+<!-- \end{frame} -->
+
+
+
+# References
+
+https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects
+
