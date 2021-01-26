@@ -19,7 +19,7 @@ feature:
 - description: 90%
   icon: r-project
   icon_pack: fab
-  name: Statistical software: R
+  name: Statistical software R
 - description: 80%
   icon: chart-line
   icon_pack: fas
@@ -27,7 +27,7 @@ feature:
 - description: 80%
   icon: camera-retro
   icon_pack: fas
-  name: Mobile data collection: ODK
+  name: Mobile data collection ODK
 
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
