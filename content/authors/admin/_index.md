@@ -10,7 +10,7 @@ role: Data Scientist
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: World Agroforestry
+- name: World Agroforestry (ICRAF)
   url: https://www.worldagroforestry.org/
 
 # Short bio (displayed in user profile at end of posts)
