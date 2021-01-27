@@ -73,4 +73,4 @@ seeking a position where my skills and experience can contribute to
 improved efficiency and informed decision making thereby contributing to
 organizational growth.
 
-# {{< icon name="download" pack="fas" >}} Download my {{< staticref "static/media/resume.pdf" "newtab" >}}CV{{< /staticref >}}.
+# {{< icon name="download" pack="fas" >}} # Download my {{< staticref "static/media/resume.pdf" "newtab" >}}#CV{{< /staticref >}}.
