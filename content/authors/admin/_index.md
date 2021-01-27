@@ -56,7 +56,7 @@ social:
 # and uncomment the lines below.
  - icon: cv
    icon_pack: ai
-   link: media/resume.pdf
+   link: static/media/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "parmutia.makui@gmail.com"
@@ -73,4 +73,4 @@ seeking a position where my skills and experience can contribute to
 improved efficiency and informed decision making thereby contributing to
 organizational growth.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "static/media/resume.pdf" "newtab" >}}CV{{< /staticref >}}.
