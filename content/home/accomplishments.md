@@ -30,7 +30,7 @@ item:
   organization: edX
   organization_url: https://www.edx.org
   title: Analytics for Decision Making
-  url: https://courses.edx.org/certificates/5231013478ba49b4a723f2f7d51988c5
+  url: "https://courses.edx.org/certificates/5231013478ba49b4a723f2f7d51988c5"
 - certificate_url: https://www.datacamp.com
   date_end: "2020-05-01"
   date_start: ""
