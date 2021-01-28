@@ -39,4 +39,20 @@ item:
   organization_url: https://www.datacamp.com
   title: Statistician with R
   url: "https://www.datacamp.com/profile/pmcquiy"
+- certificate_url: https://www.datacamp.com
+  date_end: ""
+  date_start: "2019-11-01"
+  description: ""
+  organization: DataCamp
+  organization_url: https://www.datacamp.com
+  title: Data Scientist with R
+  url: "https://www.datacamp.com/profile/pmcquiy"
+- certificate_url: https://www.datacamp.com
+  date_end: ""
+  date_start: "2019-06-01"
+  description: ""
+  organization: DataCamp
+  organization_url: https://www.datacamp.com
+  title: Data Analyst with R
+  url: "https://www.datacamp.com/profile/pmcquiy"
 ---
