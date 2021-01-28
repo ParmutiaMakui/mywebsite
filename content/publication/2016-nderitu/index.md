@@ -14,7 +14,7 @@ categories: []
 date: '2016-12-31'
 publication_types: ["2"]
 doi: ""
-url: "http://internationaljournalcorner.com/index.php/ijird_ojs/article/view/136332"
+url: ""
 featured: false
 draft: false
 # Associated Projects (optional).
