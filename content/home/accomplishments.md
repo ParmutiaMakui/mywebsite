@@ -24,7 +24,7 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
 - certificate_url: https://www.edx.org
-  date_end: "2020-07-01"
+  date_end: ""
   date_start: "2020-07-01"
   description: ""
   organization: edX
@@ -32,7 +32,7 @@ item:
   title: Analytics for Decision Making
   url: "https://courses.edx.org/certificates/5231013478ba49b4a723f2f7d51988c5"
 - certificate_url: https://www.datacamp.com
-  date_end: "2020-05-01"
+  date_end: ""
   date_start: "2020-05-01"
   description: ""
   organization: DataCamp

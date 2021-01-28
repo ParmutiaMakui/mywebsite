@@ -65,12 +65,7 @@ email: ""
 highlight_name: false
 ---
 
-I am an experienced and multi skilled data specialist in
-statistical analysis and evidence based decision
-making. Through experience, I have gained skills in research, electronic
-data collection, data management, data analysis and communication. I am
-seeking a position where my skills and experience can contribute to
-improved efficiency and informed decision making thereby contributing to
-organizational growth.
+I am an experienced data specialist in electronic data collection, data management and analysis. 
+I am interested in improving analytical workflows, understanding things, processes, people by use of data.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}CV{{< /staticref >}}.

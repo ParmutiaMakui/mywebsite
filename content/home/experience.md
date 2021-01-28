@@ -31,9 +31,9 @@ experience:
     description: |2-
         Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
+        * Development of questionnaires using ODK
+        * Data management and analysis
+        * Network analysis
         
   - title: Junior Statistician
     company: World Agroforestry
@@ -44,7 +44,8 @@ experience:
     description: |2
       Responsibilities include:
       
-      * Data analysis
-      * Data management 
+      * Data managment and analysis
+      * Network analysis
+      * Developing analytical workflows
       * Training and capacity building
 ---
