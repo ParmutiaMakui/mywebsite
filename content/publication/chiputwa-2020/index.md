@@ -1,3 +1,4 @@
+---
 title: "Transforming climate science into usable services: The effectiveness of co-production in promoting uptake of climate information by smallholder farmers in Senegal"
 subtitle: ''
 abstract: 
