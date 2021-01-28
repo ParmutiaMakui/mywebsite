@@ -16,7 +16,7 @@ categories: []
 date: '2020-12-05'
 publication_types: ["1"]
 doi: "https://doi.org/10.1016/j.cliser.2020.100203"
-url: "http://www.sciencedirect.com/science/article/pii/S2405880720300558"
+url: "https://www.sciencedirect.com/science/article/pii/S2405880720300558?via%3Dihub"
 featured: false
 draft: false
 ---
