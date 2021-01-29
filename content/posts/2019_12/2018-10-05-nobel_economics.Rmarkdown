@@ -1,0 +1,95 @@
+---
+title: "The Nobel Memorial Prize in Economic Science: Network of doctoral advisors"
+author: "Parmutia Makui"
+output:
+  html_document:
+    code_folding: hide
+    highligh: tango
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+date: 2018-10-05
+categories: ["R"]
+tags: ["rmarkdown", "networks", "sna", "nobel prize"]
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Every year, the Royal Swedish Academy of Sciences awards <strong>The Nobel Memorial Prize in Economic Sciences</strong>, officially known as
+<strong>The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel</strong> to researchers in the field of economic sciences.
+<strong>Ragnar Frisch and Jan Tinbergen</strong> were the first recipients of the prize in <strong>1969</strong>.</p>
+<p>The award is presented in Stockholm at the annual Nobel Awards ceremony on December 10. As of this year, 2018, 81 individuals have
+received the prize. The analysis below explores the network between recipients of the award and their doctoral advisors starting with the data reported <a href="https://en.wikipedia.org/wiki/List_of_Nobel_Memorial_Prize_laureates_in_Economics">here.</a></p>
+<div id="getting-data" class="section level3">
+<h3>Getting data</h3>
+<p>The list of the award recipients was first accessed from <a href="https://en.wikipedia.org/wiki/List_of_Nobel_Memorial_Prize_laureates_in_Economics">Wikipedia</a> using <strong>rvest</strong> package in <strong>R</strong>.
+From the above page, the <strong>Wikipedia</strong> page of each recipient was accessed to get details such as <strong>doctoral advisor, influences, doctoral students and influencers</strong>. The analysis below uses the data for <strong>doctoral advisors</strong> for each recipient, if such information is available. At the time of this analysis the doctoral advisors for 16 laurates was not available hence excluded from the network analysis.</p>
+</div>
+</div>
+<div id="exploring-the-data" class="section level2">
+<h2>Exploring the data</h2>
+<div id="number-of-recipients-by-year" class="section level3">
+<h3>Number of recipients by year</h3>
+<p>The graph below gives the summary of the number of recipients for each year.
+<img src="/blog/2018-10-05-nobel_economics_files/figure-html/recipients_year-1.png" width="2304" /></p>
+<blockquote>
+<p>Half of the time <strong>50%</strong>, only one recipient is awarded the prize as presented below.</p>
+</blockquote>
+<p><img src="/blog/2018-10-05-nobel_economics_files/figure-html/recipientsnum_year-1.png" width="2304" /></p>
+</div>
+<div id="number-of-recipients-by-country" class="section level3">
+<h3>Number of recipients by country</h3>
+<p>A summary of the number of recipients by country is presented below. Most of the recipients, <strong>59.3%</strong> are
+citizens of the United States with <strong>7.4%</strong> of the recipients being United Kingdom citizens. Several of the recipients are citizens have dual citizenship.
+<img src="/blog/2018-10-05-nobel_economics_files/figure-html/recipients_country-1.png" width="2304" /></p>
+</div>
+</div>
+<div id="network-of-recipients-and-doctoral-advisors" class="section level2">
+<h2>Network of recipients and doctoral advisors</h2>
+<p>The data was organized in two files, <strong>links and attributes</strong> data. The <strong>links data</strong> file contained two columns
+of the laurates and their doctoral advisors. A link is defined from the laurate to the doctoral adivisor. A sample of the first 5 cases
+of the links table is as below. The <strong>attributes data</strong> file has details about all the individuals in the network. The key variable defined in this data file is a distinction of whether an individual is a nobel laurate or not.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Laureate</th>
+<th align="left">Doctoraladvisor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Jan Tinbergen</td>
+<td align="left">Paul Ehrenfest</td>
+</tr>
+<tr class="even">
+<td align="left">Paul Samuelson</td>
+<td align="left">Joseph Schumpeter</td>
+</tr>
+<tr class="odd">
+<td align="left">Simon Kuznets</td>
+<td align="left">Wesley Clair Mitchell</td>
+</tr>
+<tr class="even">
+<td align="left">Kenneth Arrow</td>
+<td align="left">Harold Hotelling</td>
+</tr>
+<tr class="odd">
+<td align="left">Wassily Leontief</td>
+<td align="left">Ladislaus Bortkiewicz</td>
+</tr>
+</tbody>
+</table>
+<div id="complete-network" class="section level3">
+<h3>Complete network</h3>
+<p>The graph below shows the interaction between Nobel laurates in economic sciences with their doctoral advisors. Recipients of the award are colored in <strong>red</strong> while non-recipients are colored in <strong>blue</strong>. The arrows point to the doctoral adivor of the recipient. From the graph, it is notable that some doctoral students of earlier recipients also were awarded the nobel prize. Key among the doctoral advisors whose doctoral students also won the award later on are; <strong>Wassily Leontief</strong>, <strong>Robert Solow</strong> and <strong>Kenneth Arrow</strong>.
+<img src="/blog/2018-10-05-nobel_economics_files/figure-html/complete_graph-1.png" width="2304" /></p>
+</div>
+<div id="largest-connected-component" class="section level3">
+<h3>Largest connected component</h3>
+<p>The largest connected component of the complete network above was extracted and presented below. 18 of the 25 (<strong>72%</strong>), individuals in the connected component are all recipients of the award!! From <strong>Wassiley Leontief</strong>, there are two generations of recipients where some of his doctoral students (<strong>Robert Solow, Paul Samuelson and Thomas C Schelling</strong>) won the award and so did some of their students.
+<img src="/blog/2018-10-05-nobel_economics_files/figure-html/largest_comp-1.png" width="2304" /></p>
+</div>
+</div>
