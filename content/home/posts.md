@@ -5,13 +5,12 @@ widget: pages
 
 # This file represents a page section.
 headless: false
-active: true
 
 # Order that this section appears on the page.
 weight: 60
 
 title: Posts
-subtitle:
+subtitle: ''
 
 content:
   # Page type to display. E.g. post, talk, publication...
