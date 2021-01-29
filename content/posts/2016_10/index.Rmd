@@ -33,15 +33,6 @@ suppressPackageStartupMessages(library(dplyr))
 - **Option II:** From the menu options, click on **File** then **New Project..**  
 - Use of either options should give you the New Project window shown below:
 
-<!-- \begin{frame} -->
-<!-- \frametitle{New Project Window} -->
-<!-- \begin{figure} -->
-<!-- \includegraphics[width=\textwidth, height=15cm]{Figures/New_Project.png} -->
-<!-- \caption{New Project Window} -->
-<!-- \end{figure} -->
-<!-- \end{frame} -->
-
-
 
 # References
 
