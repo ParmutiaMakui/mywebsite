@@ -4,7 +4,7 @@ author: "Parmutia Makui"
 date: 2016-10-20
 categories: ["R"]
 tags: ["rmarkdown", "tidyverse", "regression"]
----
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -38,3 +38,4 @@ suppressPackageStartupMessages(library(dplyr))
 
 https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects
 
+---
