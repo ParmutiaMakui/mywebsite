@@ -10,7 +10,12 @@ output:
     theme: "journal"
     code_folding: hide
 categories: ["R"]
-tags: ["rmarkdown", "plot", "regression", "tidyverse"]
+tags: 
+- rmarkdown
+- plot
+- regression
+- tidyverse
+draft: false
 ---
 
 ```{r setup, include=FALSE}

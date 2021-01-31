@@ -2,9 +2,14 @@
 title: "Manipulating data in R"
 authors:
 - admin
+summary: Going through the main functions for data manipulation with dplyr package
 date: 2016-11-20
 categories: ["R"]
-tags: ["rmarkdown", "data manipulation", "tidyverse"]
+tags: 
+- rmarkdown
+- data manipulation
+- tidyverse
+draft: false
 ---
 
 ```{r setup, include=FALSE}
@@ -22,7 +27,7 @@ suppressWarnings(suppressPackageStartupMessages(library(foreign)))
 
 ```{r Load data}
 
-sldata <- read.dta("~/Documents/RProjects/RTrainings/Data/SL_Computed_Indicators_Subset_Data_2016-11-11.dta")
+sldata <- read.dta("../Data/SL_Computed_Indicators_Subset_Data_2016-11-11.dta")
 
 ```
 
