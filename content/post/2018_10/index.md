@@ -1,5 +1,6 @@
 ---
 title: "The Nobel Memorial Prize in Economic Science: Network of doctoral advisors"
+summary: A social network view of doctoral advisors and winners of the Nobel prize in Economic Science.
 authors:
 - admin
 output:
