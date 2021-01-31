@@ -1,0 +1,445 @@
+---
+title: "Health Facilities in Kenya"
+author: "Parmutia Makui"
+date: 2020-07-19
+categories: ["Other"]
+tags: ["rmarkdown", "health", "kenya", "devolution"]
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>On 4th February, 2020 the Government of Kenya published a list of health facilities within the country. The Kenya Gazette issue is available <a href="http://kenyalaw.org/kenya_gazette/gazette/volume/MjA4Mw--/Vol.CXXII-No.24/"><strong>here</strong></a>. The notice gives details on levels/categories of health facilities, the type and description of facilities under each level as well as the services that would be expected to be offered by such a facility. The table below gives a summary of the various levels and type of facilities under each.</p>
+<div id="health-facilities-categories" class="section level2">
+<h2>Health facilities categories</h2>
+<table class="table table-striped" style="font-size: 11px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:hf_level)Table 1. Health Facility Categorization in Kenya
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Categoriziation
+</th>
+<th style="text-align:left;">
+Facility
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Level 1
+</td>
+<td style="text-align:left;">
+Community Health Facility
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 2
+</td>
+<td style="text-align:left;">
+Medical Clinic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Dental Clinic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Dispensary/Faith Based organizations
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Mobile Clinic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Eye Clinic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 3A
+</td>
+<td style="text-align:left;">
+Basic Health Centre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 3B
+</td>
+<td style="text-align:left;">
+Comprehensive Health Centre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Medical or Dental Centre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Funeral Home
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Nursing Home or Cottage Home
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Maternity Home
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 4
+</td>
+<td style="text-align:left;">
+County Hospital or Intership Training Centre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Specialized Hospital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 5
+</td>
+<td style="text-align:left;">
+Country Referral Hospital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Level 6
+</td>
+<td style="text-align:left;">
+National Referral and Teaching Hospitals and Specialized Hospital
+</td>
+</tr>
+</tbody>
+</table>
+<p>The second schedule of the notice published the list of facility by county giving the name, level and ownership. From the notice, a list of <strong>9064</strong> health facilities are listed. Besides <strong>2</strong> cases being empty, some duplicates were also found which were excluded from the summaries below.</p>
+</div>
+<div id="total-number-of-health-facilities" class="section level2">
+<h2>Total number of health facilities</h2>
+<p>After exclusion of identified duplicates and empty rows, a total of <strong>9023</strong> health facilities was identified. County Governments owned 50.6% of all the health facilities, 44.6% of the health facilities are private owned. Over 90% of the facilities were within Level 2 and Level 3B.</p>
+<p><img src="/blog/2020-07-19-health_facilities_files/figure-html/hf_summary1-1.png" width="2304" /></p>
+<p><img src="/blog/2020-07-19-health_facilities_files/figure-html/hf_summary2-1.png" width="2304" /></p>
+</div>
+<div id="health-facilities-by-county" class="section level2">
+<h2>Health facilities by county</h2>
+<p>Table 2 shows top 10 counties by the total number of health facilities. <strong>Nairobi County</strong> has the highest number of health facilities (<strong>745</strong>) which is equivalent to <strong>8.3%</strong> of the total number of health facilities. Table 3 shows 10 counties with the lowest number of health facilities. <strong>Lamu County</strong> had the lowest number with only 23 health facilities which is less than <strong>1%</strong> of the total number of health facilities within the country.</p>
+<table class="table table-striped" style="font-size: 11px; width: auto !important; float: left; margin-right: 10px;">
+<caption style="font-size: initial !important;">
+(#tab:hf_summary3)Table 2. Counties with highest number of hospitals
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+county
+</th>
+<th style="text-align:right;">
+Number
+</th>
+<th style="text-align:right;">
+Proportion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Nairobi County
+</td>
+<td style="text-align:right;">
+745
+</td>
+<td style="text-align:right;">
+8.26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Meru County
+</td>
+<td style="text-align:right;">
+403
+</td>
+<td style="text-align:right;">
+4.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nakuru County
+</td>
+<td style="text-align:right;">
+363
+</td>
+<td style="text-align:right;">
+4.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kakamega County
+</td>
+<td style="text-align:right;">
+339
+</td>
+<td style="text-align:right;">
+3.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kitui County
+</td>
+<td style="text-align:right;">
+339
+</td>
+<td style="text-align:right;">
+3.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Machakos County
+</td>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:right;">
+3.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kiambu County
+</td>
+<td style="text-align:right;">
+285
+</td>
+<td style="text-align:right;">
+3.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kisumu County
+</td>
+<td style="text-align:right;">
+275
+</td>
+<td style="text-align:right;">
+3.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kajiado County
+</td>
+<td style="text-align:right;">
+264
+</td>
+<td style="text-align:right;">
+2.93
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uasin Gishu County
+</td>
+<td style="text-align:right;">
+261
+</td>
+<td style="text-align:right;">
+2.89
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped" style="font-size: 11px; width: auto !important; margin-right: 0; margin-left: auto">
+<caption style="font-size: initial !important;">
+(#tab:hf_summary3)Table 3. Counties with lowest number of hospitals
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+county
+</th>
+<th style="text-align:right;">
+Number
+</th>
+<th style="text-align:right;">
+Proportion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Busia County
+</td>
+<td style="text-align:right;">
+121
+</td>
+<td style="text-align:right;">
+1.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Elgeyo Marakwet County
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+1.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nyandarua County
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+1.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Taita Taveta County
+</td>
+<td style="text-align:right;">
+101
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Marsabit County
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+1.11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mandera County
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:right;">
+1.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Isiolo County
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Samburu County
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+0.94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tana River County
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+0.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lamu County
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/blog/2020-07-19-health_facilities_files/figure-html/hf_summary4-1.png" width="1440" /></p>
+</div>
+<div id="health-facilities-by-county-ownership-and-level" class="section level2">
+<h2>Health facilities by county, ownership and level</h2>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","caption":"<caption>Tabla 4. Ownership and category of health facility by county<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300","301","302","303","304","305","306","307","308","309","310","311","312","313","314","315","316","317","318","319","320","321","322","323","324","325","326","327","328","329","330","331","332","333","334","335","336","337","338","339","340","341","342","343","344","345","346","347","348","349","350","351","352","353","354","355","356","357","358","359","360","361","362","363","364","365","366","367","368","369","370","371","372","373","374","375","376","377","378","379","380","381","382","383","384","385","386","387","388","389","390","391","392","393","394","395","396","397","398","399","400","401","402","403","404","405","406","407","408","409","410","411","412","413","414","415","416","417","418","419","420","421","422","423","424","425","426","427","428","429","430","431","432","433","434","435","436","437","438","439","440","441","442","443","444","445","446","447","448","449","450","451","452","453","454","455","456","457","458","459","460","461","462","463","464","465","466","467","468","469","470","471","472","473","474","475","476","477","478","479","480","481","482","483","484","485","486","487","488","489","490","491","492","493","494","495","496","497","498","499","500","501","502","503","504","505","506"],["Baringo County","Baringo County","Baringo County","Baringo County","Baringo County","Baringo County","Baringo County","Baringo County","Baringo County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bomet County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Bungoma County","Busia County","Busia County","Busia County","Busia County","Busia County","Busia County","Busia County","Busia County","Busia County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Elgeyo Marakwet County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Embu County","Garissa County","Garissa County","Garissa County","Garissa County","Garissa County","Garissa County","Garissa County","Garissa County","Garissa County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Homa Bay County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Isiolo County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kajiado County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kakamega County","Kericho County","Kericho County","Kericho County","Kericho County","Kericho County","Kericho County","Kericho County","Kericho County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kiambu County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kilifi County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kirinyaga County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisii County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kisumu County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kitui County","Kwale County","Kwale County","Kwale County","Kwale County","Kwale County","Kwale County","Kwale County","Kwale County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Laikipia County","Lamu County","Lamu County","Lamu County","Lamu County","Lamu County","Lamu County","Lamu County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Machakos County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Makueni County","Mandera County","Mandera County","Mandera County","Mandera County","Mandera County","Mandera County","Mandera County","Mandera County","Marsabit County","Marsabit County","Marsabit County","Marsabit County","Marsabit County","Marsabit County","Marsabit County","Marsabit County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Meru County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Migori County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Mombasa County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Murang'a County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nairobi County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nakuru County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Nandi County","Narok County","Narok County","Narok County","Narok County","Narok County","Narok County","Narok County","Narok County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyamira County","Nyandarua County","Nyandarua County","Nyandarua County","Nyandarua County","Nyandarua County","Nyandarua County","Nyandarua County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Nyeri County","Samburu County","Samburu County","Samburu County","Samburu County","Samburu County","Samburu County","Samburu County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Siaya County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Taita Taveta County","Tana River County","Tana River County","Tana River County","Tana River County","Tana River County","Tana River County","Tana River County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Tharaka Nithi County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Trans Nzoia County","Turkana County","Turkana County","Turkana County","Turkana County","Turkana County","Turkana County","Turkana County","Turkana County","Turkana County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Uasin Gishu County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Vihiga County","Wajir County","Wajir County","Wajir County","Wajir County","Wajir County","Wajir County","Wajir County","Wajir County","Wajir County","West Pokot County","West Pokot County","West Pokot County","West Pokot County","West Pokot County","West Pokot County","West Pokot County"],["County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Private","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Institutional","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","National Government","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","Institutional","Non-Governmental Organizations (Ngo)","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","National Government","National Government","Non-Governmental Organizations (Ngo)","Non-Governmental Organizations (Ngo)","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","Private","County Government","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","National Government","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Institutional","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Faith Based Organization","Non-Governmental Organizations (Ngo)","Private","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Institutional","Institutional","National Government","Non-Governmental Organizations (Ngo)","Private","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private","Private","County Government","County Government","County Government","Faith Based Organization","Private","Private","Private"],["Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 3A","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 4","Level 5","Level 2","Level 4","Level 2","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 2","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3B","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 6B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 4","Level 2","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 2","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 2","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3B","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 6A","Level 6B","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 2","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 4","Level 2","Level 3A","Level 2","Level 3A","Level 4","Level 5","Level 2","Level 3A","Level 4","Level 2","Level 6B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 4","Level 2","Level 3A","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 3A","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 2","Level 3A","Level 3B","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 5","Level 2","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 3A","Level 2","Level 2","Level 3A","Level 3B","Level 2","Level 3B","Level 2","Level 3A","Level 6B","Level 2","Level 2","Level 3A","Level 3B","Level 4","Level 5","Level 2","Level 3A","Level 3B","Level 4","Level 3A","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 3B","Level 4","Level 3A","Level 2","Level 3A","Level 3B","Level 4","Level 2","Level 3A","Level 4","Level 2","Level 2","Level 3A","Level 4"],[175,13,1,2,3,2,18,1,3,91,8,2,4,1,1,1,1,13,1,3,99,37,5,4,5,7,2,1,1,1,50,15,6,5,53,18,2,6,1,1,22,11,7,68,17,2,1,1,1,1,9,4,1,75,14,3,1,7,1,1,1,90,13,8,1,33,15,5,1,21,11,29,6,1,38,26,3,3,2,2,1,1,2,27,22,4,3,35,1,1,3,5,28,7,10,1,75,13,1,3,3,2,1,125,19,12,10,102,41,4,1,8,3,2,2,1,124,35,12,4,94,10,1,5,18,8,6,4,29,12,3,7,14,5,2,4,2,1,137,35,26,8,82,13,4,4,1,74,23,15,5,38,21,2,2,3,2,1,1,45,22,10,3,68,30,3,4,1,5,2,2,3,1,20,13,12,11,76,33,1,2,1,1,4,2,2,3,1,2,1,94,27,14,11,207,50,9,3,11,1,1,1,25,21,8,2,78,7,4,3,20,9,3,3,74,14,3,3,1,1,22,4,7,5,7,2,1,2,4,2,5,126,31,1,3,1,10,127,19,11,5,78,17,5,6,2,1,2,37,4,6,3,10,13,5,2,2,11,52,3,49,17,2,3,18,2,8,1,116,33,2,3,1,11,3,2,204,16,8,4,73,22,3,1,1,1,1,15,24,16,3,26,12,3,1,3,3,1,109,34,16,7,1,76,14,4,4,9,1,1,63,5,2,1,35,11,10,4,24,2,3,2,3,1,2,1,11,2,1,353,169,61,40,10,120,15,4,9,1,7,1,2,2,142,20,26,13,1,76,7,3,8,4,2,26,9,9,1,76,27,7,3,42,11,2,2,55,26,4,1,7,4,1,1,18,9,5,1,44,21,2,7,1,28,2,92,25,3,1,9,1,2,3,1,68,10,3,4,57,4,1,6,1,15,1,94,36,2,2,4,6,1,1,42,22,3,5,47,8,4,4,1,31,4,1,1,38,6,1,1,8,1,4,60,13,1,2,6,1,1,1,2,41,5,1,2,51,17,1,1,16,1,1,46,8,7,1,154,9,2,2,8,3,2,1,28,101,20,4,4,1,1,1,1,1,69,36,12,8,2,43,17,1,1,2,2,46,8,2,2,58,29,6,2,1,24,5,22,5,116,10,1,6,6,6,1],[191,191,191,191,5,5,22,22,22,105,105,105,105,4,4,4,4,17,17,17,145,145,145,145,15,15,15,15,1,1,76,76,76,76,79,79,79,79,2,2,40,40,40,88,88,88,88,3,3,3,14,14,14,93,93,93,93,8,8,1,1,112,112,112,112,54,54,54,54,68,68,68,68,68,70,70,70,70,5,5,5,1,2,56,56,56,56,40,40,40,40,5,46,46,46,46,92,92,92,92,5,5,1,166,166,166,166,148,148,148,148,15,15,15,15,1,175,175,175,175,110,110,110,110,36,36,36,36,51,51,51,51,27,27,27,27,27,1,206,206,206,206,99,99,99,5,5,117,117,117,117,63,63,63,63,5,5,1,1,80,80,80,80,106,106,106,106,106,12,12,12,12,1,56,56,56,56,113,113,113,113,113,9,9,9,9,4,4,3,3,146,146,146,146,269,269,269,269,14,14,14,14,56,56,56,56,89,89,89,3,35,35,35,35,91,91,91,5,5,5,38,38,38,38,10,10,10,2,11,11,11,162,162,162,162,162,10,162,162,162,162,106,106,106,106,3,3,2,50,50,50,50,30,30,30,30,68,68,68,68,68,68,68,3,29,29,29,29,155,155,155,155,155,16,16,16,232,232,232,232,99,99,99,99,3,3,3,58,58,58,58,42,42,42,42,7,7,7,167,167,167,167,167,98,98,98,98,11,11,11,71,71,71,71,60,60,60,60,34,34,34,34,34,1,3,3,14,14,14,633,633,633,633,633,149,149,149,149,149,10,10,10,2,202,202,202,202,202,86,86,86,14,14,14,45,45,45,45,110,110,110,3,57,57,57,57,86,86,86,86,11,11,1,1,33,33,33,33,67,67,67,8,8,30,30,121,121,121,121,12,12,12,3,1,85,85,85,85,62,62,62,7,7,16,16,134,134,134,134,11,11,11,1,72,72,72,72,59,59,59,5,5,37,37,37,37,45,45,45,1,13,13,13,76,76,76,76,8,8,8,1,2,49,49,49,49,70,70,70,70,17,17,1,62,62,62,62,167,167,167,167,13,13,13,1,28,125,125,125,5,5,2,2,1,1,127,127,127,127,127,62,62,62,62,4,4,58,58,58,58,95,95,95,95,1,56,56,56,56,127,127,127,6,13,13,13],[91.62,6.81,0.52,1.05,60,40,81.82,4.55,13.64,86.67,7.62,1.9,3.81,25,25,25,25,76.47,5.88,17.65,68.28,25.52,3.45,2.76,33.33,46.67,13.33,6.67,100,100,65.79,19.74,7.89,6.58,67.09,22.78,2.53,7.59,50,50,55,27.5,17.5,77.27,19.32,2.27,1.14,33.33,33.33,33.33,64.29,28.57,7.14,80.65,15.05,3.23,1.08,87.5,12.5,100,100,80.36,11.61,7.14,0.89,61.11,27.78,9.26,1.85,30.88,16.18,42.65,8.82,1.47,54.29,37.14,4.29,4.29,40,40,20,100,100,48.21,39.29,7.14,5.36,87.5,2.5,2.5,7.5,100,60.87,15.22,21.74,2.17,81.52,14.13,1.09,3.26,60,40,100,75.3,11.45,7.23,6.02,68.92,27.7,2.7,0.68,53.33,20,13.33,13.33,100,70.86,20,6.86,2.29,85.45,9.09,0.91,4.55,50,22.22,16.67,11.11,56.86,23.53,5.88,13.73,51.85,18.52,7.41,14.81,7.41,100,66.5,16.99,12.62,3.88,82.83,13.13,4.04,80,20,63.25,19.66,12.82,4.27,60.32,33.33,3.17,3.17,60,40,100,100,56.25,27.5,12.5,3.75,64.15,28.3,2.83,3.77,0.94,41.67,16.67,16.67,25,100,35.71,23.21,21.43,19.64,67.26,29.2,0.88,1.77,0.88,11.11,44.44,22.22,22.22,75,25,66.67,33.33,64.38,18.49,9.59,7.53,76.95,18.59,3.35,1.12,78.57,7.14,7.14,7.14,44.64,37.5,14.29,3.57,87.64,7.87,4.49,100,57.14,25.71,8.57,8.57,81.32,15.38,3.3,60,20,20,57.89,10.53,18.42,13.16,70,20,10,100,36.36,18.18,45.45,77.78,19.14,0.62,1.85,0.62,100,78.4,11.73,6.79,3.09,73.58,16.04,4.72,5.66,66.67,33.33,100,74,8,12,6,33.33,43.33,16.67,6.67,2.94,16.18,76.47,4.41,72.06,25,2.94,100,62.07,6.9,27.59,3.45,74.84,21.29,1.29,1.94,0.65,68.75,18.75,12.5,87.93,6.9,3.45,1.72,73.74,22.22,3.03,1.01,33.33,33.33,33.33,25.86,41.38,27.59,5.17,61.9,28.57,7.14,2.38,42.86,42.86,14.29,65.27,20.36,9.58,4.19,0.6,77.55,14.29,4.08,4.08,81.82,9.09,9.09,88.73,7.04,2.82,1.41,58.33,18.33,16.67,6.67,70.59,5.88,8.82,5.88,8.82,100,66.67,33.33,78.57,14.29,7.14,55.77,26.7,9.64,6.32,1.58,80.54,10.07,2.68,6.04,0.67,70,10,20,100,70.3,9.9,12.87,6.44,0.5,88.37,8.14,3.49,57.14,28.57,14.29,57.78,20,20,2.22,69.09,24.55,6.36,100,73.68,19.3,3.51,3.51,63.95,30.23,4.65,1.16,63.64,36.36,100,100,54.55,27.27,15.15,3.03,65.67,31.34,2.99,87.5,12.5,93.33,6.67,76.03,20.66,2.48,0.83,75,8.33,16.67,100,100,80,11.76,3.53,4.71,91.94,6.45,1.61,85.71,14.29,93.75,6.25,70.15,26.87,1.49,1.49,36.36,54.55,9.09,100,58.33,30.56,4.17,6.94,79.66,13.56,6.78,80,20,83.78,10.81,2.7,2.7,84.44,13.33,2.22,100,61.54,7.69,30.77,78.95,17.11,1.32,2.63,75,12.5,12.5,100,100,83.67,10.2,2.04,4.08,72.86,24.29,1.43,1.43,94.12,5.88,100,74.19,12.9,11.29,1.61,92.22,5.39,1.2,1.2,61.54,23.08,15.38,100,100,80.8,16,3.2,80,20,50,50,100,100,54.33,28.35,9.45,6.3,1.57,69.35,27.42,1.61,1.61,50,50,79.31,13.79,3.45,3.45,61.05,30.53,6.32,2.11,100,42.86,8.93,39.29,8.93,91.34,7.87,0.79,100,46.15,46.15,7.69]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>county<\/th>\n      <th>ownership<\/th>\n      <th>level<\/th>\n      <th>Number<\/th>\n      <th>Total_num<\/th>\n      <th>Proportion<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="disclaimer" class="section level2">
+<h2>Disclaimer</h2>
+<blockquote>
+<p>The summaries and graphs shown here are based on the data within the Gazette notice above.<br />
+I have not looked at the overlap or difference between the data used here and data found in: <a href="http://kmhfl.health.go.ke/#/home">Kenya Master Health Facility List</a></p>
+</blockquote>
+</div>
