@@ -1,6 +1,7 @@
 ---
 title: "Manipulating data in R"
-author: "Parmutia Makui"
+authors:
+- admin
 date: 2016-11-20
 categories: ["R"]
 tags: ["rmarkdown", "data manipulation", "tidyverse"]
