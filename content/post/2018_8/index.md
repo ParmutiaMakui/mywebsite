@@ -1,8 +1,8 @@
 ---
 title: "Add linear equation to a plot"
+summary: Below is a way of adding an equation to a plot
 authors:
 - admin
-summary: Below is a way of adding an equation to a plot
 date: 2018-08-16
 output: 
   html_document:
