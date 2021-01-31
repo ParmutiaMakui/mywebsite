@@ -23,14 +23,14 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-- certificate_url: https://www.edx.org
+- certificate_url: "https://courses.edx.org/certificates/5231013478ba49b4a723f2f7d51988c5"
   date_end: ""
   date_start: "2020-07-01"
   description: ""
   organization: edX
   organization_url: https://www.edx.org
   title: Analytics for Decision Making
-  url: "https://courses.edx.org/certificates/5231013478ba49b4a723f2f7d51988c5"
+  url: "https://www.edx.org"
 - certificate_url: https://www.datacamp.com
   date_end: ""
   date_start: "2020-05-01"
