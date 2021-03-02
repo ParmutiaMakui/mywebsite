@@ -26,6 +26,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: MicroMasters Program in Statistics and Data Science
+    institution: MITx on edX
+    year: 2021
   - course: BSc in Applied Statistics with IT
     institution: Maseno University
     year: 2012
