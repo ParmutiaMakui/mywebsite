@@ -27,7 +27,7 @@ experience:
     company_url: 'https://www.worldagroforestry.org/'
     location: Nairobi
     date_start: '2019-10-01'
-    date_end: ''
+    date_end: '2021-08-15'
     description: |2-
         Responsibilities include:
         
