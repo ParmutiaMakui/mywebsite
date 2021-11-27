@@ -26,9 +26,12 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: MSc in Public Policy and Management
+    institution: Corvinus University of Budapest
+    year 2023
   - course: MicroMasters Program in Statistics and Data Science
     institution: MITx on edX
-    year: 2021
+    year: 2022
   - course: BSc in Applied Statistics with IT
     institution: Maseno University
     year: 2012
