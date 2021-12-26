@@ -22,7 +22,7 @@ tags: []
 categories: []
 date: '2020-08-09'
 publication_types: ["2"]
-doi: "https://doi.org/10.1007/s11625-020-00840-8"
+doi: "https://worldagroforestry.org/publication/diagnostic-and-baseline-study-implementing-ecosystem-based-adaptation-rural-landscapes"
 featured: false
 draft: false
 # Associated Projects (optional).
