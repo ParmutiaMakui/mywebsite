@@ -18,10 +18,10 @@ authors:
 - Ahmad M
 - Wanjara J
 - Mwangi SK
-tags: ["report", "africa", "gambia"]
+tags: []
 categories: []
 date: '2020-08-09'
-publication_types: ["2"]
+publication_types: ["4"]
 doi: ""
 url: ""
 featured: false
