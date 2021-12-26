@@ -17,12 +17,12 @@
 [[main]]
   name = "Publications"
   url = "#publications"
-  weight = 50
+  weight = 30
 
 [[main]]
   name = "Reports"
   url = "#reports"
-  weight = 30
+  weight = 40
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
