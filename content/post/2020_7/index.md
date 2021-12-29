@@ -22,13 +22,11 @@ knitr::opts_chunk$set(echo = FALSE,
 
 ```{r Load libraries}
 
-library(plyr)
+
 library(tidyverse)
 library(ggthemes)
 library(reshape2)
 library(gdata)
-library(stringr)
-library(lubridate)
 library(readxl)
 library(knitr)
 library(kableExtra)
