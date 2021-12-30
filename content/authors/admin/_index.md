@@ -18,7 +18,7 @@ organizations:
 
 # Interests to show in About widget
 interests:
-- Evidenced based policy making
+- Evidence-based policy making
 - Public policy analysis
 - Data Science
 - Network analysis
